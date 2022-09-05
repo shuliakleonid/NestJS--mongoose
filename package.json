@@ -39,7 +39,6 @@
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/parser": "^5.0.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
-
     "eslint": "^8.23.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-import-resolver-typescript": "^3.5.0",
@@ -73,6 +72,11 @@
     "collectCoverageFrom": [
       "**/*.(t|j)s"
     ],
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
     	"lint-staged": {
 		"*.{ts,tsx}": [
 			"eslint --cache --fix",
