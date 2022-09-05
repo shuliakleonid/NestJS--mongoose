@@ -1,8 +1,9 @@
 import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { appSettings } from './settings/domain/app-settings';
 import { AppModule } from './app.module';
 
-// const PORT = appSettings.api.PORT;
+const PORT = appSettings.api.PORT;
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -19,8 +20,8 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document);
 
   await app.listen(5001, () => {
-    // console.log('Server started on PORT: ', PORT);
-    // console.log('ENV', appSettings.environment.getEnv());
+    console.log('Server started on PORT:', PORT);
+    console.log('ENV', appSettings.environment.getEnv());
   });
 }
 bootstrap();
