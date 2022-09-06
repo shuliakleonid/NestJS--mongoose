@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Test Title",
+    "currentSprint": {
+      "id": 1,
+      "title": "Test Sprint",
+      "description": "Test Description",
+      "level": 1
+    },
+    "status": "new",
+    "createdAt": "2022-08-25T18:09:26.668+00:00",
+    "participantsCount": 4
+  },
+  {
+    "title": "Test dsfadfsaf",
+    "currentSprint": {
+      "id": 2,
+      "title": "Test Sprint",
+      "description": "Test Description",
+      "level": 3
+    },
+    "status": "new",
+    "createdAt": "2022-08-25T18:09:26.668+00:00",
+    "participantsCount": 3
+  },
+  {
+    "title": "Test sdafdf",
+    "currentSprint": {
+      "id": 3,
+      "title": "Test Sprint",
+      "description": "Test Description",
+      "level": 2
+    },
+    "status": "new",
+    "createdAt": "2022-08-25T18:09:26.668+00:00",
+    "participantsCount": 2
+  },
+  {
+    "title": "Test Tisdfdsfadftle",
+    "currentSprint": {
+      "id": 5,
+      "title": "Test Sprint",
+      "description": "Test Description",
+      "level": 10
+    },
+    "status": "new",
+    "createdAt": "2022-08-25T18:09:26.668+00:00",
+    "participantsCount": 500
+  }
+]

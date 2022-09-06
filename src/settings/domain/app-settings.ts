@@ -44,7 +44,7 @@ export class DatabaseSettings {
     this.MONGODB_URL =
       environmentVariables.MONGODB_URL ||
       // eslint-disable-next-line no-secrets/no-secrets
-      'mongodb+srv://Zeleny:Zeleny3416240@cluster0.gt3qw.mongodb.net/?retryWrites=true&w=majority';
+      'mongodb+srv://Zeleny:Zeleny3416240@cluster0.gt3qw.mongodb.net/';
   }
 }
 
