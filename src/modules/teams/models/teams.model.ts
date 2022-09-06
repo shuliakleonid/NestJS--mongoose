@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-import { Types, Document } from 'mongoose';
+import { Document, Types } from 'mongoose';
 
 export enum TEAM_STATUS {
   NEW = 'new',
@@ -16,7 +16,7 @@ interface ISprint {
   level: number;
 }
 
-export type TeamsModel = Teams & Document;
+export type TeamsDocument = Teams & Document;
 
 class Sprint implements ISprint {
   @ApiProperty({ type: Number })
@@ -47,8 +47,8 @@ export class Teams {
   title: string;
 
   @ApiPropertyOptional()
-  @Prop({ type: () => Sprint })
-  currentSprint: Sprint;
+  @Prop({ type: () => Sprint, default: null })
+  currentSprint: Sprint | null;
 
   @ApiProperty({ enum: TEAM_STATUS })
   @Prop({ required: true, enum: TEAM_STATUS })

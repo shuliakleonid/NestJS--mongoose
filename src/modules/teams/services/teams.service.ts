@@ -1,11 +1,12 @@
-import { TeamsRepositoryService } from './../repositories/teams-repository.service';
 import { Injectable } from '@nestjs/common';
+import { TeamsDocument } from '../models/teams.model';
+import { TeamsRepository } from '../repositories/teams.repository';
 
 @Injectable()
 export class TeamsService {
-  constructor(private readonly teamsRepositoryService: TeamsRepositoryService) {}
+  constructor(private readonly teamsRepositoryService: TeamsRepository) {}
 
-  async getTeams() {
+  async getTeams(): Promise<TeamsDocument[]> {
     return this.teamsRepositoryService.findTeams();
   }
 }
